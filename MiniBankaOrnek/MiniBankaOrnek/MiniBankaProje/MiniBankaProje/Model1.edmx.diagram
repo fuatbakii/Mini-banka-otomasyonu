@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fa8c810aff944577a216cfba4576a6af" Name="Diagram1">
+        <EntityTypeShape EntityType="MiniBankaAksamModel.Banka" Width="1.5" PointX="1.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.BankaMusteri" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.BankaSube" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.HesapHareket" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.HesapTur" Width="1.5" PointX="3.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.IslemTur" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.Kullanici" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.KullaniciRol" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.Musteri" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.ParaTransfer" Width="1.5" PointX="8.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.vKullanici" Width="1.5" PointX="3.75" PointY="12.875" IsExpanded="true" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_BankaSube_Banka" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_BankaMusteri_BankaSube" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_BankaMusteri_Musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_Kullanici_BankaSube" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_HesapHareket_IslemTur" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_Kullanici_KullaniciRol" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.Hesap" Width="1.5" PointX="6" PointY="7.25" />
+        <EntityTypeShape EntityType="MiniBankaAksamModel.vMusteri" Width="1.5" PointX="10.375" PointY="6.75" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_Hesap_BankaMusteri" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_Hesap_HesapTur" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_HesapHareket_Hesap" />
+        <AssociationConnector Association="MiniBankaAksamModel.FK_ParaTransfer_Hesap" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

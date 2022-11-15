@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MiniBankaAksamModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Banka">
+    <Key>
+      <PropertyRef Name="BankaID" />
+    </Key>
+    <Property Name="BankaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankaAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BankaKodu" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="Faks" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="BankaSube" Relationship="Self.FK_BankaSube_Banka" FromRole="Banka" ToRole="BankaSube" />
+  </EntityType>
+  <EntityType Name="BankaMusteri">
+    <Key>
+      <PropertyRef Name="BankaMusteriID" />
+    </Key>
+    <Property Name="BankaMusteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankaSubeId" Type="Int32" />
+    <Property Name="MusteriId" Type="Int32" />
+    <Property Name="IslemTarihi" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BankaSube" Relationship="Self.FK_BankaMusteri_BankaSube" FromRole="BankaMusteri" ToRole="BankaSube" />
+    <NavigationProperty Name="Musteri" Relationship="Self.FK_BankaMusteri_Musteri" FromRole="BankaMusteri" ToRole="Musteri" />
+    <NavigationProperty Name="Hesap" Relationship="MiniBankaAksamModel.FK_Hesap_BankaMusteri" FromRole="BankaMusteri" ToRole="Hesap" />
+  </EntityType>
+  <EntityType Name="BankaSube">
+    <Key>
+      <PropertyRef Name="BankaSubeID" />
+    </Key>
+    <Property Name="BankaSubeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankaId" Type="Int32" />
+    <Property Name="BankaSubeAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BankaSubeKodu" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="Faks" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Banka" Relationship="Self.FK_BankaSube_Banka" FromRole="BankaSube" ToRole="Banka" />
+    <NavigationProperty Name="BankaMusteri" Relationship="Self.FK_BankaMusteri_BankaSube" FromRole="BankaSube" ToRole="BankaMusteri" />
+    <NavigationProperty Name="Kullanici" Relationship="Self.FK_Kullanici_BankaSube" FromRole="BankaSube" ToRole="Kullanici" />
+  </EntityType>
+  <EntityType Name="HesapHareket">
+    <Key>
+      <PropertyRef Name="HesapHareketID" />
+    </Key>
+    <Property Name="HesapHareketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HesapId" Type="Int32" Nullable="false" />
+    <Property Name="IslemTutari" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IslemTurId" Type="Int32" Nullable="false" />
+    <Property Name="IslemYonu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IslemAciklamasi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IslemTarihi" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="IslemTur" Relationship="Self.FK_HesapHareket_IslemTur" FromRole="HesapHareket" ToRole="IslemTur" />
+    <NavigationProperty Name="Hesap" Relationship="MiniBankaAksamModel.FK_HesapHareket_Hesap" FromRole="HesapHareket" ToRole="Hesap" />
+  </EntityType>
+  <EntityType Name="HesapTur">
+    <Key>
+      <PropertyRef Name="HesapTurID" />
+    </Key>
+    <Property Name="HesapTurID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HesapTurAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Hesap" Relationship="MiniBankaAksamModel.FK_Hesap_HesapTur" FromRole="HesapTur" ToRole="Hesap" />
+  </EntityType>
+  <EntityType Name="IslemTur">
+    <Key>
+      <PropertyRef Name="IslemTurID" />
+    </Key>
+    <Property Name="IslemTurID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IslemTurAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="HesapHareket" Relationship="Self.FK_HesapHareket_IslemTur" FromRole="IslemTur" ToRole="HesapHareket" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciTCNO" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciRolId" Type="Int32" Nullable="false" />
+    <Property Name="GirisAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GirisSifre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BankaSubeId" Type="Int32" />
+    <Property Name="Gorev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BankaSube" Relationship="Self.FK_Kullanici_BankaSube" FromRole="Kullanici" ToRole="BankaSube" />
+    <NavigationProperty Name="KullaniciRol" Relationship="Self.FK_Kullanici_KullaniciRol" FromRole="Kullanici" ToRole="KullaniciRol" />
+  </EntityType>
+  <EntityType Name="KullaniciRol">
+    <Key>
+      <PropertyRef Name="KullaniciRolID" />
+    </Key>
+    <Property Name="KullaniciRolID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciRolAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciRolKod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kullanici" Relationship="Self.FK_Kullanici_KullaniciRol" FromRole="KullaniciRol" ToRole="Kullanici" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriNo" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TCNO" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DogumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="3" />
+    <Property Name="EvAdresi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsAdresi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BankaMusteri" Relationship="Self.FK_BankaMusteri_Musteri" FromRole="Musteri" ToRole="BankaMusteri" />
+  </EntityType>
+  <EntityType Name="ParaTransfer">
+    <Key>
+      <PropertyRef Name="ParaTransferID" />
+    </Key>
+    <Property Name="ParaTransferID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HesapId" Type="Int32" Nullable="false" />
+    <Property Name="AliciHesapIBAN" Type="String" MaxLength="26" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="AliciHesapBankaKodu" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="AliciHesapBankaSubeKodu" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="AliciHesapNo" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="AliciAdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransferTurAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IslemTutari" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IslemAciklamasi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IslemTarihi" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Hesap" Relationship="MiniBankaAksamModel.FK_ParaTransfer_Hesap" FromRole="ParaTransfer" ToRole="Hesap" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vKullanici">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+      <PropertyRef Name="KullaniciTCNO" />
+      <PropertyRef Name="KullaniciAd" />
+      <PropertyRef Name="KullaniciSoyad" />
+      <PropertyRef Name="KullaniciRolId" />
+      <PropertyRef Name="GirisAd" />
+      <PropertyRef Name="GirisSifre" />
+    </Key>
+    <Property Name="KullaniciID" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciTCNO" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciRolId" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciRolAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciRolKod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GirisAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GirisSifre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BankaSubeId" Type="Int32" />
+    <Property Name="BankaId" Type="Int32" />
+    <Property Name="BankaAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BankaKodu" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="BankaSubeAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BankaSubeKodu" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="Gorev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_BankaSube_Banka">
+    <End Role="Banka" Type="Self.Banka" Multiplicity="0..1" />
+    <End Role="BankaSube" Type="Self.BankaSube" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banka">
+        <PropertyRef Name="BankaID" />
+      </Principal>
+      <Dependent Role="BankaSube">
+        <PropertyRef Name="BankaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankaMusteri_BankaSube">
+    <End Role="BankaSube" Type="Self.BankaSube" Multiplicity="0..1" />
+    <End Role="BankaMusteri" Type="Self.BankaMusteri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankaSube">
+        <PropertyRef Name="BankaSubeID" />
+      </Principal>
+      <Dependent Role="BankaMusteri">
+        <PropertyRef Name="BankaSubeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankaMusteri_Musteri">
+    <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
+    <End Role="BankaMusteri" Type="Self.BankaMusteri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriID" />
+      </Principal>
+      <Dependent Role="BankaMusteri">
+        <PropertyRef Name="MusteriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanici_BankaSube">
+    <End Role="BankaSube" Type="Self.BankaSube" Multiplicity="0..1" />
+    <End Role="Kullanici" Type="Self.Kullanici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankaSube">
+        <PropertyRef Name="BankaSubeID" />
+      </Principal>
+      <Dependent Role="Kullanici">
+        <PropertyRef Name="BankaSubeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HesapHareket_IslemTur">
+    <End Role="IslemTur" Type="Self.IslemTur" Multiplicity="1" />
+    <End Role="HesapHareket" Type="Self.HesapHareket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IslemTur">
+        <PropertyRef Name="IslemTurID" />
+      </Principal>
+      <Dependent Role="HesapHareket">
+        <PropertyRef Name="IslemTurId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanici_KullaniciRol">
+    <End Role="KullaniciRol" Type="Self.KullaniciRol" Multiplicity="1" />
+    <End Role="Kullanici" Type="Self.Kullanici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KullaniciRol">
+        <PropertyRef Name="KullaniciRolID" />
+      </Principal>
+      <Dependent Role="Kullanici">
+        <PropertyRef Name="KullaniciRolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MiniBankaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Banka" EntityType="Self.Banka" />
+    <EntitySet Name="BankaMusteri" EntityType="Self.BankaMusteri" />
+    <EntitySet Name="BankaSube" EntityType="Self.BankaSube" />
+    <EntitySet Name="HesapHareket" EntityType="Self.HesapHareket" />
+    <EntitySet Name="HesapTur" EntityType="Self.HesapTur" />
+    <EntitySet Name="IslemTur" EntityType="Self.IslemTur" />
+    <EntitySet Name="Kullanici" EntityType="Self.Kullanici" />
+    <EntitySet Name="KullaniciRol" EntityType="Self.KullaniciRol" />
+    <EntitySet Name="Musteri" EntityType="Self.Musteri" />
+    <EntitySet Name="ParaTransfer" EntityType="Self.ParaTransfer" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="vKullanici" EntityType="Self.vKullanici" />
+    <AssociationSet Name="FK_BankaSube_Banka" Association="Self.FK_BankaSube_Banka">
+      <End Role="Banka" EntitySet="Banka" />
+      <End Role="BankaSube" EntitySet="BankaSube" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankaMusteri_BankaSube" Association="Self.FK_BankaMusteri_BankaSube">
+      <End Role="BankaSube" EntitySet="BankaSube" />
+      <End Role="BankaMusteri" EntitySet="BankaMusteri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankaMusteri_Musteri" Association="Self.FK_BankaMusteri_Musteri">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="BankaMusteri" EntitySet="BankaMusteri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanici_BankaSube" Association="Self.FK_Kullanici_BankaSube">
+      <End Role="BankaSube" EntitySet="BankaSube" />
+      <End Role="Kullanici" EntitySet="Kullanici" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HesapHareket_IslemTur" Association="Self.FK_HesapHareket_IslemTur">
+      <End Role="IslemTur" EntitySet="IslemTur" />
+      <End Role="HesapHareket" EntitySet="HesapHareket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanici_KullaniciRol" Association="Self.FK_Kullanici_KullaniciRol">
+      <End Role="KullaniciRol" EntitySet="KullaniciRol" />
+      <End Role="Kullanici" EntitySet="Kullanici" />
+    </AssociationSet>
+    <EntitySet Name="Hesap" EntityType="MiniBankaAksamModel.Hesap" />
+    <EntitySet Name="vMusteri" EntityType="MiniBankaAksamModel.vMusteri" />
+    <AssociationSet Name="FK_Hesap_BankaMusteri" Association="MiniBankaAksamModel.FK_Hesap_BankaMusteri">
+      <End Role="BankaMusteri" EntitySet="BankaMusteri" />
+      <End Role="Hesap" EntitySet="Hesap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hesap_HesapTur" Association="MiniBankaAksamModel.FK_Hesap_HesapTur">
+      <End Role="HesapTur" EntitySet="HesapTur" />
+      <End Role="Hesap" EntitySet="Hesap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HesapHareket_Hesap" Association="MiniBankaAksamModel.FK_HesapHareket_Hesap">
+      <End Role="Hesap" EntitySet="Hesap" />
+      <End Role="HesapHareket" EntitySet="HesapHareket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParaTransfer_Hesap" Association="MiniBankaAksamModel.FK_ParaTransfer_Hesap">
+      <End Role="Hesap" EntitySet="Hesap" />
+      <End Role="ParaTransfer" EntitySet="ParaTransfer" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Hesap">
+    <Key>
+      <PropertyRef Name="HesapID" />
+    </Key>
+    <Property Name="HesapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankaMusteriId" Type="Int32" Nullable="false" />
+    <Property Name="HesapTurId" Type="Int32" Nullable="false" />
+    <Property Name="HesapAd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HesapNo" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="IBAN" Type="String" MaxLength="26" FixedLength="true" Unicode="true" />
+    <Property Name="AcilisTarihi" Type="DateTime" Precision="3" />
+    <Property Name="KapanisTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" Nullable="false" />
+    <Property Name="Bakiye" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="BankaMusteri" Relationship="MiniBankaAksamModel.FK_Hesap_BankaMusteri" FromRole="Hesap" ToRole="BankaMusteri" />
+    <NavigationProperty Name="HesapTur" Relationship="MiniBankaAksamModel.FK_Hesap_HesapTur" FromRole="Hesap" ToRole="HesapTur" />
+    <NavigationProperty Name="HesapHareket" Relationship="MiniBankaAksamModel.FK_HesapHareket_Hesap" FromRole="Hesap" ToRole="HesapHareket" />
+    <NavigationProperty Name="ParaTransfer" Relationship="MiniBankaAksamModel.FK_ParaTransfer_Hesap" FromRole="Hesap" ToRole="ParaTransfer" />
+  </EntityType>
+  <EntityType Name="vMusteri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+      <PropertyRef Name="BankaMusteriID" />
+      <PropertyRef Name="MusteriNo" />
+      <PropertyRef Name="TCNO" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="Telefon" />
+      <PropertyRef Name="BankaAd" />
+      <PropertyRef Name="BankaKodu" />
+    </Key>
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="BankaSubeId" Type="Int32" />
+    <Property Name="IslemTarihi" Type="DateTime" Precision="3" />
+    <Property Name="BankaMusteriID" Type="Int32" Nullable="false" />
+    <Property Name="BankaSubeAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="TCNO" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="Ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DogumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="3" />
+    <Property Name="EvAdresi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsAdresi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="BankaAd" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BankaKodu" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Hesap_BankaMusteri">
+    <End Type="MiniBankaAksamModel.BankaMusteri" Role="BankaMusteri" Multiplicity="1" />
+    <End Type="MiniBankaAksamModel.Hesap" Role="Hesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankaMusteri">
+        <PropertyRef Name="BankaMusteriID" />
+      </Principal>
+      <Dependent Role="Hesap">
+        <PropertyRef Name="BankaMusteriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hesap_HesapTur">
+    <End Type="MiniBankaAksamModel.HesapTur" Role="HesapTur" Multiplicity="1" />
+    <End Type="MiniBankaAksamModel.Hesap" Role="Hesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HesapTur">
+        <PropertyRef Name="HesapTurID" />
+      </Principal>
+      <Dependent Role="Hesap">
+        <PropertyRef Name="HesapTurId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HesapHareket_Hesap">
+    <End Type="MiniBankaAksamModel.Hesap" Role="Hesap" Multiplicity="1" />
+    <End Type="MiniBankaAksamModel.HesapHareket" Role="HesapHareket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hesap">
+        <PropertyRef Name="HesapID" />
+      </Principal>
+      <Dependent Role="HesapHareket">
+        <PropertyRef Name="HesapId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParaTransfer_Hesap">
+    <End Type="MiniBankaAksamModel.Hesap" Role="Hesap" Multiplicity="1" />
+    <End Type="MiniBankaAksamModel.ParaTransfer" Role="ParaTransfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hesap">
+        <PropertyRef Name="HesapID" />
+      </Principal>
+      <Dependent Role="ParaTransfer">
+        <PropertyRef Name="HesapId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

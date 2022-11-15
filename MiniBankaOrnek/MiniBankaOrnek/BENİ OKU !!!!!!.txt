@@ -1,0 +1,8 @@
+Sql servera database dosyası(DB Dosyalar klasörü) ekledikten
+sonra kullanıcı tablosunda 3 adet kullanıcı
+var. kullanıcı adı ve şifreleri ile
+girip deneyin.
+
+MiniBankaProje projesini (visual studio) da açıp app.config içindeki 
+connection string deki server kısmına kendi pc nizdeki sql server adını yazmayı unutmayın yoksa projemiz çalışmaz
+

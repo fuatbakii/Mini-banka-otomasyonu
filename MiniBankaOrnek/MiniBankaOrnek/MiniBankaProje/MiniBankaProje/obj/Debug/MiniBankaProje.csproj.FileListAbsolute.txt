@@ -1,0 +1,66 @@
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.exe.config
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.exe
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.pdb
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csprojAssemblyReference.cache
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmAnaEkran.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmGirisEkran.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.Properties.Resources.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.GenerateResource.cache
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.CoreCompileInputs.cache
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.exe
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.pdb
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.dll
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.xml
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\muratince\Desktop\2021 Bahar Dersler\GorselProgramlama2_AksamOgretim\MiniBanka\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.CopyComplete
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.exe.config
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.exe
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.pdb
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.dll
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.xml
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csprojAssemblyReference.cache
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmAnaEkran.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmBankaBilgileri.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmGirisEkran.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.Properties.Resources.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.GenerateResource.cache
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.CoreCompileInputs.cache
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.CopyComplete
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.exe
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.pdb
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmBankaSubeEkleme.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmBankaSubeListesi.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmKullaniciEkle.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmKullaniciListesi.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmMusteriEkle.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmMusteriListesi.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmHesapEkle.resources
+C:\Users\muratince\Desktop\2021 Bahar Dersler\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmHesapHareket.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.exe.config
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.exe
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\MiniBankaProje.pdb
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.dll
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.xml
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.AssemblyReference.cache
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmAnaEkran.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmBankaBilgileri.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmBankaSubeEkleme.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmBankaSubeListesi.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmGirisEkran.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmHesapEkle.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmHesapHareket.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmKullaniciEkle.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmKullaniciListesi.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmMusteriEkle.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.frmMusteriListesi.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.Properties.Resources.resources
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.GenerateResource.cache
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.CoreCompileInputs.cache
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.csproj.CopyComplete
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.exe
+C:\Users\muratince\Desktop\MiniBankaAksam\MiniBankaProje\MiniBankaProje\obj\Debug\MiniBankaProje.pdb
